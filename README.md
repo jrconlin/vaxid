@@ -1,3 +1,12 @@
+Blah, so yeah, I had misunderstood what [SMART health
+Cards](https://smarthealth.cards/) was doing and... basically
+re-implemented that.
+
+Go read their version.
+
+It's designed by far smarter people.
+
+
 
 # Easy VAXID generation
 
