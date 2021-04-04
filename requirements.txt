@@ -1,0 +1,2 @@
+cryptography>=2.5
+qrcode[pil]>=6.1
