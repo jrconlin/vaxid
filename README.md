@@ -24,13 +24,14 @@ The VAPID "claims" are a set of JSON keys and values. Vaxid alters the set of fi
 At a minimum a Vaxid claim set should look like:
 ```
 {
-    "nam":"Pat Patient",       /* The patient's name */
-    "idt":"2021-04-08",        /* Patient innoculation date */
-    "ilc":"ALB#P-8675309",     /* The innoculation location identifier */
-    "pty":"CA_Drivers",        /* Patient provide ID type
-                                  e.g. driver's licence number, last 4 social,
-                                  PIN, etc.*/
-    "pid":"B01234567"          /* Patient provided identifcation number */
+    "nam": "Bullwinkle J Moose",    /* The patient's name */
+    "idt": "2021-04-01",            /* Patient innoculation date */
+    "ilc": "UCSF_Parnassus",        /* Innoculation location ID */
+    "itp": "CA_Drivers",            /* Patient provided ID type
+                                       e.g Drivers License, last 4 SS,
+                                       PIN, etc.
+                                    */
+    "pid": "B012345678"             /* Patient provided ID value */
 }
 ```
 Additional fields may be included.
@@ -46,6 +47,9 @@ The resulting string could then be encoded into a QR code which can be printed o
 scanned by a local device, which can then do either a quick local proof, or can do a
 deeper verification by matching the public key against the published one. (Those keys can
 be cached locally, providing for quicker, future updates.)
+
+For example, the above encoded info would look like:
+![Sample Image](img/sample.svg)
 
 For this demo application, claims should be stored in a JSON compatible file. In the examples
 below, we've stored the claims into a file named `claims.json`.
